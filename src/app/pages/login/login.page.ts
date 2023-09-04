@@ -29,8 +29,10 @@ export class LoginPage implements OnInit {
       }
 
       this.router.navigate(['principal'], parametros);
+  }
 
-
+  irSignup(){
+    this.router.navigate(['signup']);
   }
 
 }

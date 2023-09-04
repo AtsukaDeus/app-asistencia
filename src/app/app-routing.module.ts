@@ -9,16 +9,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'principal',
-    redirectTo: 'principal',
-    pathMatch: 'full'
-  },
-  {
-    path: '**',
-    redirectTo: 'e404',
-    pathMatch: 'full'
-  },
-  {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
