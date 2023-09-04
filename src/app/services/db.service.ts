@@ -8,6 +8,4 @@ export class DbService {
 
   constructor(private router: Router) { }
 
-  canActivate() {
-  }
 }
