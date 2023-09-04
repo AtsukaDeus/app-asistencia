@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { DbService } from './services/db.service';
 
 const routes: Routes = [
   {
@@ -26,8 +25,6 @@ const routes: Routes = [
     path: 'e404',
     loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
   },
-
-
 ];
 
 @NgModule({
