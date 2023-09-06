@@ -11,24 +11,47 @@ export class LoginPage implements OnInit {
   mdl_username: string = "";
   mdl_password: string = "";
 
+  credencial_user: string = "";
+  credencial_pass: string = "";
+
   constructor(private router: Router) { 
 
 
   }
-
-  ngOnInit() {
   
+  ngOnInit() {
+
+    let datos_registrarse = this.router.getCurrentNavigation();
+
+    if (datos_registrarse?.extras.state){
+
+      this.credencial_user = datos_registrarse.extras.state['username'];
+      this.credencial_pass = datos_registrarse.extras.state['password'];
+    }
+    else{
+      // integrar mensaje flotante
+    }
+
   }
 
   irPrincipal(){
-      let parametros: NavigationExtras = {
-        state: {
-          username: this.mdl_username,
-          password: this.mdl_password
-        }
-      }
+      
+      if(this.mdl_username == this.credencial_user && this.mdl_password == this.credencial_pass){
+          
+        let parametros: NavigationExtras = {
+            replaceUrl: true,
+            state: {
+              username: this.mdl_username,
+              password: this.mdl_password
+            }
+          }
 
-      this.router.navigate(['principal'], parametros);
+          this.router.navigate(['principal'], parametros);
+      }
+      else{
+        // integrar mensaje flotante
+      }
+      
   }
 
   irSignup(){
