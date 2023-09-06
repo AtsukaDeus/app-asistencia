@@ -28,9 +28,6 @@ export class LoginPage implements OnInit {
       this.credencial_user = datos_registrarse.extras.state['username'];
       this.credencial_pass = datos_registrarse.extras.state['password'];
     }
-    else{
-      // integrar mensaje flotante
-    }
 
   }
 
