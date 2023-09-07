@@ -8,7 +8,7 @@
 
   <div class="div-login">
     <br >
-    <p style="margin-left:10px;">Bienvenido! Ingrese sus credenciales para registrar su asistencia.</p>
+    <p>Bienvenido! Ingrese sus credenciales para registrar su asistencia.</p>
     <br>
 
     <ion-item class="inputs">
@@ -35,11 +35,15 @@
       ></ion-input>
     </ion-item>
     <br>
-    <p style="margin-left:10px;">No tienes cuenta? pincha <a (click)="irSignup()">Aqui</a></p>
+    <p>No tienes cuenta? pincha <a (click)="irSignup()">Aquí</a></p>
     
     <br>
 
     <ion-button (click)="irPrincipal()" color="warning" expand="block">Ingresar</ion-button>
+
+    <p>No recuerdas tu contraseña?, presiona 
+      <a (click)="irRetrive()">Aquí</a> para recuperar
+    </p>
   </div>
 
 

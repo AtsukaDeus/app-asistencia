@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="div-login">
+    <br>
+    <p>Si perdió su contraseña ingrese su Nombre de Usuario y su nueva contraseña</p>
+    <br>
+
+    <ion-item class="inputs">
+      <ion-input         
+        type="text"
+        fill="solid"
+        label="Nombre de Usuario"
+        labelPlacement="floating"
+        helperText="Ingrese su nombre de usuario"
+        [(ngModel)] = "credencial_user_confirmation"
+        >
+      </ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-item class="inputs">
+      <ion-input
+        type="text"
+        fill="solid"
+        label="Nueva Contraseña"
+        labelPlacement="floating"
+        helperText="Ingrese nueva contraseña"
+        [(ngModel)] = "credencial_pass"
+        >
+      </ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-button (click)="cambiarContrasena()" color="warning" expand="block">Confirmar</ion-button>
+
+
+  </div>
+
+
+</ion-content>

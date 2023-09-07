@@ -22,12 +22,14 @@ export class SignupPage implements OnInit {
 
       
       let parametros: NavigationExtras = {
-          replaceUrl: true,
           state: {
-            username: this.mdl_username,
-            password: this.mdl_password
-          }
+            username_signup: this.mdl_username,
+            password_signup: this.mdl_password
+          },
+          replaceUrl: true,
       }
+      
+      // integrar mensaje flotante de usuario creado!
 
       this.router.navigate(['login'], parametros);
 

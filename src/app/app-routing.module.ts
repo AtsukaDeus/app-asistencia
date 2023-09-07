@@ -20,9 +20,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
   },
   {
+    path: 'retrive',
+    loadChildren: () => import('./pages/retrive/retrive.module').then( m => m.RetrivePageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
   },
+
 
 ];
 
