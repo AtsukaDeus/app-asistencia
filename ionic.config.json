@@ -1,7 +1,0 @@
-{
-  "name": "app-asistencia",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
